@@ -1,0 +1,34 @@
+import getpass
+import sys
+
+# Example users and passwords
+users = {
+    "ivanweinreb": "your_password_here",
+    "example_user": "example_password"
+}
+
+def login():
+    print("Login System")
+    username = input("Username: ")
+    password = getpass.getpass("Password: ")
+    
+    if username in users and users[username] == password:
+        print("Login successful!")
+        successful_page()
+    else:
+        failed_page()
+
+def successful_page():
+    print("Welcome to the main page!")
+
+def failed_page():
+    print("Redirecting to the error page...")
+    # Simulate redirection to error page
+    error_page()
+
+def error_page():
+    print("This is the error page. Invalid login credentials.")
+
+if __name__ == "__main__":
+    login()
+``` ▋
